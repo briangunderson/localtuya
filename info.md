@@ -1,8 +1,8 @@
-[![](https://img.shields.io/github/release/rospogrigio/localtuya-homeassistant/all.svg?style=for-the-badge)](https://github.com/rospogrigio/localtuya-homeassistant/releases)
+[![](https://img.shields.io/github/release/briangunderson/localtuya-homeassistant/all.svg?style=for-the-badge)](https://github.com/briangunderson/localtuya-homeassistant/releases)
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg?style=for-the-badge)](https://github.com/custom-components/hacs)
-[![](https://img.shields.io/badge/MAINTAINER-%40rospogrigio-green?style=for-the-badge)](https://github.com/rospogrigio)
+[![](https://img.shields.io/badge/MAINTAINER-%40briangunderson-green?style=for-the-badge)](https://github.com/briangunderson)
 
-![logo](https://github.com/rospogrigio/localtuya-homeassistant/blob/master/img/logo-small.png)
+![logo](https://github.com/briangunderson/localtuya-homeassistant/blob/master/img/logo-small.png)
 
 A Home Assistant custom Integration for local handling of Tuya-based devices.
 
@@ -52,17 +52,17 @@ For manual installation, copy the localtuya folder and all of its contents into 
 To start configuring the integration, just press the "+ADD INTEGRATION" button in the Settings - Integrations page, and select LocalTuya from the drop-down menu.
 The Cloud API configuration page will appear, requesting to input your Tuya IoT Platform account credentials:
 
-![cloud_setup](https://github.com/rospogrigio/localtuya-homeassistant/blob/master/img/9-cloud_setup.png)
+![cloud_setup](https://github.com/briangunderson/localtuya-homeassistant/blob/master/img/9-cloud_setup.png)
 
 To setup a Tuya IoT Platform account and setup a project in it, refer to the instructions for the official Tuya integration:
 https://www.home-assistant.io/integrations/tuya/
 The place to find the Client ID and Secret is described in this link (in the ["Get Authorization Key"](https://www.home-assistant.io/integrations/tuya/#get-authorization-key) paragraph), while the User ID can be found in the "Link Tuya App Account" subtab within the Cloud project:
 
-![user_id.png](https://github.com/rospogrigio/localtuya-homeassistant/blob/master/img/8-user_id.png)
+![user_id.png](https://github.com/briangunderson/localtuya-homeassistant/blob/master/img/8-user_id.png)
 
 > **Note: as stated in the above link, if you already have an account and an IoT project, make sure that it was created after May 25, 2021 (due to changes introduced in the cloud for Tuya 2.0). Otherwise, you need to create a new project. See the following screenshot for where to check your project creation date:**
 
-![project_date](https://github.com/rospogrigio/localtuya-homeassistant/blob/master/img/6-project_date.png)
+![project_date](https://github.com/briangunderson/localtuya-homeassistant/blob/master/img/6-project_date.png)
 
 After pressing the Submit button, the first setup is complete and the Integration will be added. 
 
@@ -70,14 +70,14 @@ After pressing the Submit button, the first setup is complete and the Integratio
 
 After the Integration has been set up, devices can be added and configured pressing the Configure button in the Integrations page:
 
-![integration_configure](https://github.com/rospogrigio/localtuya-homeassistant/blob/master/img/10-integration_configure.png)
+![integration_configure](https://github.com/briangunderson/localtuya-homeassistant/blob/master/img/10-integration_configure.png)
 
 
 # Integration Configuration menu
 
 The configuration menu is the following:
 
-![config_menu](https://github.com/rospogrigio/localtuya-homeassistant/blob/master/img/11-config_menu.png)
+![config_menu](https://github.com/briangunderson/localtuya-homeassistant/blob/master/img/11-config_menu.png)
 
 From this menu, you can select the "Reconfigure Cloud API account" to edit your Tuya Cloud credentials and settings, in case they have changed or if the integration was migrated from v.3.x.x versions.
 
@@ -90,7 +90,7 @@ If you select to "Add or Edit a device", a drop-down menu will appear containing
 > **Note: The tuya app on your device must be closed for the following steps to work reliably.**
 
 
-![discovery](https://github.com/rospogrigio/localtuya-homeassistant/blob/master/img/1-discovery.png)
+![discovery](https://github.com/briangunderson/localtuya-homeassistant/blob/master/img/1-discovery.png)
 
 If you have selected one entry, you only need to input the device's Friendly Name and localKey. These values will be automatically retrieved if you have configured your Cloud API account, otherwise you will need to input them manually.
 
@@ -102,29 +102,29 @@ Setting the 'DPIDs to send in RESET command' is optional. It is used when a devi
 
 Once you press "Submit", the connection is tested to check that everything works.
 
-![image](https://github.com/rospogrigio/localtuya-homeassistant/blob/master/img/2-device.png)
+![image](https://github.com/briangunderson/localtuya-homeassistant/blob/master/img/2-device.png)
 
 Then, it's time to add the entities: this step will take place several times. First, select the entity type from the drop-down menu to set it up.
 After you have defined all the needed entities, leave the "Do not add more entities" checkbox checked: this will complete the procedure.
 
-![entity_type](https://github.com/rospogrigio/localtuya-homeassistant/blob/master/img/3-entity_type.png)
+![entity_type](https://github.com/briangunderson/localtuya-homeassistant/blob/master/img/3-entity_type.png)
 
 For each entity, the associated DP has to be selected. All the options requiring to select a DP will provide a drop-down menu showing
 all the available DPs found on the device (with their current status!!) for easy identification. Each entity type has different options
 to be configured. Here is an example for the "switch" entity:
 
-![entity](https://github.com/rospogrigio/localtuya-homeassistant/blob/master/img/4-entity.png)
+![entity](https://github.com/briangunderson/localtuya-homeassistant/blob/master/img/4-entity.png)
 
 Once you configure the entities, the procedure is complete. You can now associate the device with an Area in Home Assistant
 
-![success](https://github.com/rospogrigio/localtuya-homeassistant/blob/master/img/5-success.png)
+![success](https://github.com/briangunderson/localtuya-homeassistant/blob/master/img/5-success.png)
 
 
 # Migration from LocalTuya v.3.x.x
 
-If you upgrade LocalTuya from v3.x.x or older, the config entry will automatically be migrated to the new setup. Everything should work as it did before the upgrade, apart from the fact that in the Integration tab you will see just one LocalTuya integration (showing the number of devices and entities configured) instead of several Integrations grouped within the LocalTuya Box. This will happen both if the old configuration was done using YAML files and with the config flow. Once migrated, you can just input your Tuya IoT account credentials to enable the support for the Cloud API (and benefit from the local_key retrieval and auto-update): see [Configuration menu](https://github.com/rospogrigio/localtuya#integration-configuration-menu).
+If you upgrade LocalTuya from v3.x.x or older, the config entry will automatically be migrated to the new setup. Everything should work as it did before the upgrade, apart from the fact that in the Integration tab you will see just one LocalTuya integration (showing the number of devices and entities configured) instead of several Integrations grouped within the LocalTuya Box. This will happen both if the old configuration was done using YAML files and with the config flow. Once migrated, you can just input your Tuya IoT account credentials to enable the support for the Cloud API (and benefit from the local_key retrieval and auto-update): see [Configuration menu](https://github.com/briangunderson/localtuya#integration-configuration-menu).
 
-If you had configured LocalTuya using YAML files, you can delete all its references from within the YAML files because they will no longer be considered so they might bring confusion (only the logger configuration part needs to be kept, of course, see [Debugging](https://github.com/rospogrigio/localtuya#debugging) ).
+If you had configured LocalTuya using YAML files, you can delete all its references from within the YAML files because they will no longer be considered so they might bring confusion (only the logger configuration part needs to be kept, of course, see [Debugging](https://github.com/briangunderson/localtuya#debugging) ).
 
 
 # Energy monitoring values
@@ -178,7 +178,7 @@ Then, edit the device that is showing problems and check the "Enable debugging f
 * Create a (good and precise) sensor (counter) for Energy (kWh) -not just Power, but based on it-.
       Ideas: Use: https://www.home-assistant.io/components/integration/ and https://www.home-assistant.io/components/utility_meter/
 
-* Everything listed in https://github.com/rospogrigio/localtuya-homeassistant/issues/15
+* Everything listed in https://github.com/briangunderson/localtuya-homeassistant/issues/15
 
 # Thanks to:
 
@@ -192,5 +192,5 @@ jasonacox, for the TinyTuya project from where I could import the code to commun
 
 postlund, for the ideas, for coding 95% of the refactoring and boosting the quality of this repo to levels hard to imagine (by me, at least) and teaching me A LOT of how things work in Home Assistant.
 
-<a href="https://www.buymeacoffee.com/rospogrigio" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
-<a href="https://paypal.me/rospogrigio" target="_blank"><img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg" border="0" alt="PayPal Logo" style="height: auto !important;width: auto !important;"></a>
+<a href="https://www.buymeacoffee.com/briangunderson" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+<a href="https://paypal.me/briangunderson" target="_blank"><img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg" border="0" alt="PayPal Logo" style="height: auto !important;width: auto !important;"></a>
