@@ -1,4 +1,4 @@
-![logo](https://github.com/briangunderson/localtuya-homeassistant/blob/master/img/logo-small.png)
+![logo](https://github.com/briangunderson/localtuya/blob/master/img/logo-small.png)
 
 A Home Assistant custom Integration for local handling of Tuya-based devices.
 
@@ -48,17 +48,17 @@ For manual installation, copy the localtuya folder and all of its contents into 
 To start configuring the integration, just press the "+ADD INTEGRATION" button in the Settings - Integrations page, and select LocalTuya from the drop-down menu.
 The Cloud API configuration page will appear, requesting to input your Tuya IoT Platform account credentials:
 
-![cloud_setup](https://github.com/briangunderson/localtuya-homeassistant/blob/master/img/9-cloud_setup.png)
+![cloud_setup](https://github.com/briangunderson/localtuya/blob/master/img/9-cloud_setup.png)
 
 To setup a Tuya IoT Platform account and setup a project in it, refer to the instructions for the official Tuya integration:
 https://www.home-assistant.io/integrations/tuya/
 The Client ID and Secret can be found at `Cloud > Development > Overview` and the User ID can be found in the "Link Tuya App Account" subtab within the Cloud project:
 
-![user_id.png](https://github.com/briangunderson/localtuya-homeassistant/blob/master/img/8-user_id.png)
+![user_id.png](https://github.com/briangunderson/localtuya/blob/master/img/8-user_id.png)
 
 > **Note: as stated in the above link, if you already have an account and an IoT project, make sure that it was created after May 25, 2021 (due to changes introduced in the cloud for Tuya 2.0). Otherwise, you need to create a new project. See the following screenshot for where to check your project creation date:**
 
-![project_date](https://github.com/briangunderson/localtuya-homeassistant/blob/master/img/6-project_date.png)
+![project_date](https://github.com/briangunderson/localtuya/blob/master/img/6-project_date.png)
 
 After pressing the Submit button, the first setup is complete and the Integration will be added. 
 
@@ -66,14 +66,14 @@ After pressing the Submit button, the first setup is complete and the Integratio
 
 After the Integration has been set up, devices can be added and configured pressing the Configure button in the Integrations page:
 
-![integration_configure](https://github.com/briangunderson/localtuya-homeassistant/blob/master/img/10-integration_configure.png)
+![integration_configure](https://github.com/briangunderson/localtuya/blob/master/img/10-integration_configure.png)
 
 
 # Integration Configuration menu
 
 The configuration menu is the following:
 
-![config_menu](https://github.com/briangunderson/localtuya-homeassistant/blob/master/img/11-config_menu.png)
+![config_menu](https://github.com/briangunderson/localtuya/blob/master/img/11-config_menu.png)
 
 From this menu, you can select the "Reconfigure Cloud API account" to edit your Tuya Cloud credentials and settings, in case they have changed or if the integration was migrated from v.3.x.x versions.
 
@@ -86,7 +86,7 @@ If you select to "Add or Edit a device", a drop-down menu will appear containing
 > **Note: The tuya app on your device must be closed for the following steps to work reliably.**
 
 
-![discovery](https://github.com/briangunderson/localtuya-homeassistant/blob/master/img/1-discovery.png)
+![discovery](https://github.com/briangunderson/localtuya/blob/master/img/1-discovery.png)
 
 If you have selected one entry, you only need to input the device's Friendly Name and localKey. These values will be automatically retrieved if you have configured your Cloud API account, otherwise you will need to input them manually.
 
@@ -98,13 +98,13 @@ Setting the 'DPIDs to send in RESET command' is optional. It is used when a devi
 
 Once you press "Submit", the connection is tested to check that everything works.
 
-![image](https://github.com/briangunderson/localtuya-homeassistant/blob/master/img/2-device.png)
+![image](https://github.com/briangunderson/localtuya/blob/master/img/2-device.png)
 
 
 Then, it's time to add the entities: this step will take place several times. First, select the entity type from the drop-down menu to set it up.
 After you have defined all the needed entities, leave the "Do not add more entities" checkbox checked: this will complete the procedure.
 
-![entity_type](https://github.com/briangunderson/localtuya-homeassistant/blob/master/img/3-entity_type.png)
+![entity_type](https://github.com/briangunderson/localtuya/blob/master/img/3-entity_type.png)
 
 For each entity, the associated DP has to be selected. All the options requiring to select a DP will provide a drop-down menu showing
 all the available DPs found on the device (with their current status!!) for easy identification. 
@@ -113,11 +113,11 @@ all the available DPs found on the device (with their current status!!) for easy
 
 Each entity type has different options to be configured. Here is an example for the "switch" entity:
 
-![entity](https://github.com/briangunderson/localtuya-homeassistant/blob/master/img/4-entity.png)
+![entity](https://github.com/briangunderson/localtuya/blob/master/img/4-entity.png)
 
 Once you configure the entities, the procedure is complete. You can now associate the device with an Area in Home Assistant
 
-![success](https://github.com/briangunderson/localtuya-homeassistant/blob/master/img/5-success.png)
+![success](https://github.com/briangunderson/localtuya/blob/master/img/5-success.png)
 
 
 # Migration from LocalTuya v.3.x.x
@@ -204,11 +204,11 @@ Then, edit the device that is showing problems and check the "Enable debugging f
 * Create a (good and precise) sensor (counter) for Energy (kWh) -not just Power, but based on it-.
       Ideas: Use: https://www.home-assistant.io/integrations/integration/ and https://www.home-assistant.io/integrations/utility_meter/
 
-* Everything listed in https://github.com/briangunderson/localtuya-homeassistant/issues/15
+* Everything listed in https://github.com/briangunderson/localtuya/issues/15
 
 # Thanks to:
 
-NameLessJedi https://github.com/NameLessJedi/localtuya-homeassistant and mileperhour https://github.com/mileperhour/localtuya-homeassistant being the major sources of inspiration, and whose code for switches is substantially unchanged.
+NameLessJedi https://github.com/NameLessJedi/localtuya and mileperhour https://github.com/mileperhour/localtuya being the major sources of inspiration, and whose code for switches is substantially unchanged.
 
 TradeFace, for being the only one to provide the correct code for communication with the cover (in particular, the 0x0d command for the status instead of the 0x0a, and related needs such as double reply to be received): https://github.com/TradeFace/tuya/
 
